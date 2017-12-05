@@ -16,10 +16,6 @@ FROM centos:7
 MAINTAINER bradley childs, bchilds@gmail.com
 RUN yum update -y
 
-# install the shell flex script that the provisioner uses.
-RUN mkdir -p  /opt/storage_drivers
-COPY flex-provision.sh /opt/storage/flex-provision.sh
-
 # install the go kube piece of provisioner
 COPY flex-provisioner /opt/storage_drivers/flex-provisioner
 
